@@ -1,0 +1,26 @@
+.post-tag {
+  display: inline-block;
+  background: rgba(80,80,80,0.15);
+  padding: 0 10px;
+  margin: 0 2px;
+  border-radius: 4px;
+  color: #505050;
+  font-size: 90%;
+}
+
+.post-tag:hover {
+  text-decoration: none;
+  background: #505050;
+  color: #fff
+}
+
+.post-tags {
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "HelveticaNeue-CondensedBlack", "Tahoma", "Arial Black", sans-serif;
+  color: #404040;
+}

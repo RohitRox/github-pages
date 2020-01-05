@@ -1,0 +1,39 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           /:year/:month/:day/:title
+
+# Setup
+title:               RohitRox @ Tech
+tagline:
+description:         Rohit Joshi's tech blog, tutorials and presentation slides
+url:                 https://rohitrox.github.io
+paginate:            5
+
+excerpt_separator: <!-- more -->
+disqus_short_name: webdevelopmentlog
+disqus_url:        https://rohitrox.github.io
+# Gems
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# Optimize Jekyll
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+
+# About/contact
+author:
+  name:              Rohit Joshi
+  url:               https://twitter.com/roxxypoxxy
+  email:             link2jroy@gmail.com
+
+# Custom vars
+version:             1.0.0
