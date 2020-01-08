@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simplier Microfrontends Implementation with React and ESNext
+title: Simpler Microfrontends Implementation with React and ESNext
 date: 2020-01-05 19:50
 comments: true
 categories: [Microfrontends]
@@ -35,17 +35,17 @@ Let's see how our take on microfrontends at Cloudfactory affects page organizati
 ### Microfrontends in action
 ![microfrontends in action](/images/microfrontends-3.png)
 
-There could be many permutations and combinations but the one illustrated in the picture where there could be specific page/SPA owned by a team, and shared styles and components/widgets belonging to a multi-domain need to reside in multiples page that may belong to different teams.
+There could be many permutations and combinations. There are even implementation of microfrontends which can run multi-framework components on the same page [Read more about this](https://ivanjov.com/micro-frontends-how-i-built-a-spa-with-angular-and-react/). The one illustrated in the picture is fairly simpler where the teams are organized under business domains and domain-specific interfaces cross the (user-facing) application interface boundaries. These domain components may appear in any user-facing interface but need to behave differently and maintained separately.
 
 We've seen similar kind of organization on AWS Console's interface and some of the Facebook's interface.
 
 An alternative implementation, to create a big single SPA via Run-time integration via JavaScript is documented and implemented wonderfully on [https://microfrontends.com/](https://microfrontends.com/) and [https://martinfowler.com/articles/micro-frontends.html#Run-timeIntegrationViaJavascript](https://martinfowler.com/articles/micro-frontends.html#Run-timeIntegrationViaJavascript)
 
-Instead of relying on a runtime integration system or complicated frameworks, We have taken an approach to tweak a few configs in the build process and use some old tricks. Our goal was to enable teams to have microfrontend architectures but not burden system with yet another system for managing microfrontend itself.
+Instead of relying on a runtime integration system or complicated frameworks, We have taken an approach to tweak a few configs in the build process and use some old tricks. Our goal was to enable teams to have microfrontend architectures but not burden system with yet another system for managing microfrontend itself. Technically it means we don't have a bootstrapping layer or any other service serving asset manifests.
 
-The solution uses React with Typescript and Webpack with ESNext modules set. This combination allows us to build extremely optimized applications leveraging code splitting and lazy loading.
+The solution uses React with Typescript and Webpack with ESNext modules set. This combination allows us to build extremely optimized multiple applications without increasing the bundle size and leverages all the code splitting and lazy loading goodness.
 
-There are a good number of articles on React code splitting and lazy loading already on the web, so I skipping those details in this post.
+There are a good number of articles on React code splitting and lazy loading already on the web, so I am skipping those details in this post.
 
 The solution works for a scenario where we have a large application, large enough so that it cannot be contained as a Single Page App, thus are divided into multiple SPA pages or related pages. And multiple teams working together to delivers small micro-components on the page.
 
@@ -129,3 +129,13 @@ The index pages are hardcoded with the links to a specific resource in CDN. Whil
 Source code is available at [https://github.com/RohitRox/microfrontend-esnext-demo](https://github.com/RohitRox/microfrontend-esnext-demo)
 
 The folder has been named to mimic separate modules.
+
+Resources and Further Researches:
+
+  - [Micro Frontends on martinFowler.com by Cam Jackson (Article)](https://martinfowler.com/articles/micro-frontends.html)
+  - [Microfrontends implementation and demo by Cam Jackson (Article)](https://microfrontends.com/)
+  - [Micro Frontends - A microservice approach to the modern by Ivan Jovanovic (Video)](https://vimeo.com/372248526)
+  - [Micro Frontends - How I Built An SPA With Angular And React? by Ivan Jovanovic (Article)](https://www.ivanjov.com/micro-frontends-how-i-built-a-spa-with-angular-and-react/)
+  - [Micro Frontend Architecture by Luca Mezzalira, DAZN (Video)](https://www.youtube.com/watch?v=BuRB3djraeM)
+  - [Micro-frontends, the future of Frontend architectures by Luca Mezzalira, DAZN (Article)](https://medium.com/dazn-tech/micro-frontends-the-future-of-frontend-architectures-5867ceded39a)
+  - [Building serverless micro frontends at the edge at AWS re:Invent 2019 (Video)(Advanced)](https://youtube.com/watch?v=fT-5RHTtFNgs)
