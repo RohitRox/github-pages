@@ -130,6 +130,12 @@ Source code is available at [https://github.com/RohitRox/microfrontend-esnext-de
 
 The folder has been named to mimic separate modules.
 
+### What's not addressed in this post
+
+  - **Stylesheets** - We export base styles as shared and use them via CDN. To prevent overriding and conflicts, we obfuscate CSS class names.
+  - **Multiple React Version** - This solution does not provide a good solution for this. All of our microfrontends use compatible versions of React and ReactDOM so we use a common version. We didn't develop on top of legacy application and started from scratch so haven't run through this problem.
+  - **SPA Routing** - React routing stuff is not detailed in this post or the demo. The container page is in control of the router and if microfrontends need to control page paths they do it by communicating with the container via props, callbacks or event system.
+
 Resources and Further Researches:
 
   - [Micro Frontends on martinFowler.com by Cam Jackson (Article)](https://martinfowler.com/articles/micro-frontends.html)
