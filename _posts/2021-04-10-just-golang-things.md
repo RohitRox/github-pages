@@ -88,6 +88,7 @@ categories: [Golang]
   var Calc CalcIface = calc{}
 ```
 
+<!-- more -->
 
 ### Add cool funcs on types
 
