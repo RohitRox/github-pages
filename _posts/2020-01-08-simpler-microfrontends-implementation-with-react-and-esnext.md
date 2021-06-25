@@ -145,5 +145,3 @@ Resources and Further Researches:
   - [Micro Frontend Architecture by Luca Mezzalira, DAZN (Video)](https://www.youtube.com/watch?v=BuRB3djraeM)
   - [Micro-frontends, the future of Frontend architectures by Luca Mezzalira, DAZN (Article)](https://medium.com/dazn-tech/micro-frontends-the-future-of-frontend-architectures-5867ceded39a)
   - [Building serverless micro frontends at the edge at AWS re:Invent 2019 (Video)(Advanced)](https://youtube.com/watch?v=fT-5RHTtFNgs)
-
-Have some comments, questions or feedback, let's [Get in touch](https://twitter.com/roxxypoxxy)
